@@ -15,6 +15,12 @@ from .views.hwi import hwi_views
 env_path = Path('.') / '.flaskenv'
 load_dotenv(env_path)
 
+def create_and_init():
+    app = create_app()
+    app.app_context().push()
+    init_app(app)
+    return app
+
 
 def create_app(config="cryptoadvance.specter.config.DevelopmentConfig"):
     # Enables injection of a different config via Env-Variable
@@ -102,3 +108,9 @@ class AuthenticatedUser:
 
     def get_id(self):
         return "there-is-only-one-User"
+
+if __name__ == "__main__":
+    print("Muuuh")
+    app = create_app()
+    app.app_context().push()
+    init_app(app)
