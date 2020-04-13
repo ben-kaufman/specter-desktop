@@ -1,4 +1,4 @@
-from .rpc import BitcoinCLI
+from .rpc import BitcoinCLI, RpcError
 from .corecache import CoreCache
 
 class BitcoinCLICached:
@@ -48,7 +48,10 @@ class BitcoinCLICached:
         return BitcoinCLICached(self.cli.user, self.cli.passwd, self.cli.host, self.cli.port, self.cli.protocol, self.cli.path, self.cli.timeout)
     
     def wallet(self, name=""):
-        return BitcoinCLICached.from_wallet_cli(cli=self.cli.wallet(name))
+        try:
+            return BitcoinCLICached.from_wallet_cli(cli=self.cli.wallet(name))
+        except RpcError as rpce:
+            raise rpce
     
     def listtransactions(self, *args, **kwargs):
         cli_transactions = self.cli.listtransactions(*args, **kwargs)
@@ -70,26 +73,7 @@ class BitcoinCLICached:
         return self.cli.rescanblockchain(*args, **kwargs)
 
     def __getattr__(self, method):
-        return self.cli.__getattr__(method)
-
-if __name__ == '__main__':
-
-    cli = BitcoinCLI("bitcoinrpc", "foi3uf092ury97iufhjf30982hf928uew9jd209j", port=18443)
-    
-    print(cli.url)
-
-    print(cli.getmininginfo())
-
-    print(cli.listwallets())
-
-    ##### WORKING WITH WALLETS #########
-
-    print(cli.getbalance(wallet=""))
-
-    # or
-
-    w = cli.wallet("") # will load default wallet.dat
-
-    print(w.url)
-
-    print(w.getbalance()) # now you can run -rpcwallet commands
+        try:
+            return self.cli.__getattr__(method)
+        except RpcError as rpce:
+            raise rpce
