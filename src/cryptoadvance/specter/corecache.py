@@ -2,9 +2,9 @@
 cache = {}
 
 class CoreCache():
-    def __init__(self, name, cli):
+    def __init__(self, cli):
         self.cli = cli
-        self.walletname = name
+        self.walletname = cli.getwalletinfo()["walletname"]
         self.setup_cache()
 
     @property
