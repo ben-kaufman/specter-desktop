@@ -2,22 +2,22 @@ from .rpc import BitcoinCLI, RpcError
 from .corecache import CoreCache
 
 class BitcoinCLICached:
-    def __init__(self, user="", passwd="", host="127.0.0.1", port=8332, protocol="http", path="", timeout=30, cli=None, **kwargs):
+    def __init__(self, user="", passwd="", host="127.0.0.1", port=8332, protocol="http", path="", timeout=30, cli=None, name="", **kwargs):
         if cli:
             # If cli argument is not empty it should contain a wallet settting in it
             # Only CLI with a wallet configured should have caching
             self.cli = cli
-            self.cache = CoreCache(cli)
+            self.cache = CoreCache(name, cli)
         else:
             self.cli = BitcoinCLI(user, passwd, host, port, protocol, path, timeout)
             self.cache = None
 
     @classmethod
-    def from_wallet_cli(cls, cli):
+    def from_wallet_cli(cls, name, cli):
         """ Initialize BitcoinCLICached from a CLI with wallet configured.
             This call is internally used when the `wallet` method is called and configures the CLI wallet.
         """
-        return cls(cli=cli)
+        return cls(name=name, cli=cli)
  
     def scan_addresses(self, wallet):
         scanning = self.cli.getwalletinfo()["scanning"]
@@ -50,7 +50,8 @@ class BitcoinCLICached:
     def wallet(self, name=""):
         try:
             wallet_cli = self.cli.wallet(name)
-            return BitcoinCLICached.from_wallet_cli(cli=wallet_cli)
+            wallet_name = cli.getwalletinfo()["walletname"]
+            return BitcoinCLICached.from_wallet_cli(name=wallet_name, cli=wallet_cli)
         except RpcError as rpce:
             raise rpce
         except Exception as e:
