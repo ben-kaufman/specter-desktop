@@ -49,9 +49,12 @@ class BitcoinCLICached:
     
     def wallet(self, name=""):
         try:
-            return BitcoinCLICached.from_wallet_cli(cli=self.cli.wallet(name))
+            wallet_cli = self.cli.wallet(name)
+            return BitcoinCLICached.from_wallet_cli(cli=wallet_cli)
         except RpcError as rpce:
             raise rpce
+        except Exception as e:
+                raise e
     
     def listtransactions(self, *args, **kwargs):
         cli_transactions = self.cli.listtransactions(*args, **kwargs)
@@ -77,3 +80,5 @@ class BitcoinCLICached:
             return self.cli.__getattr__(method)
         except RpcError as rpce:
             raise rpce
+        except Exception as e:
+                raise e
