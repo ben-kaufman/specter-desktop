@@ -50,7 +50,7 @@ class BitcoinCLICached:
     def wallet(self, name=""):
         try:
             wallet_cli = self.cli.wallet(name)
-            wallet_name = cli.getwalletinfo()["walletname"]
+            wallet_name = self.cli.getwalletinfo()["walletname"]
             return BitcoinCLICached.from_wallet_cli(name=wallet_name, cli=wallet_cli)
         except RpcError as rpce:
             raise rpce
