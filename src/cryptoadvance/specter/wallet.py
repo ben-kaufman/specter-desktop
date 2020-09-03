@@ -665,7 +665,7 @@ class Wallet():
 
         if fee_rate > 0.0 and fee_unit == "SAT_B":
             # bitcoin core needs us to convert sat/B to BTC/kB
-            options["feeRate"] = (fee_rate * 1000) / 10 ** 8
+            options["feeRate"] = round((fee_rate * 1000) / 10 ** 8, 8)
             print(options["feeRate"])
 
         # don't reuse change addresses - use getrawchangeaddress instead

@@ -401,16 +401,18 @@
 				}
 				let fees = psbt.fee * 1e8
 				let manualFee = document.getElementById('fee_rate').value;
-				alert(txSize)
-				alert(manualFee)
-				alert(psbt['fee'])
+				// alert(txSize)
+				// alert(manualFee)
+				// alert(psbt['fee'])
 				let feeRate = manualFee * (manualFee / (psbt['fee'] * 1e8 / psbt.tx.vsize)) * (txSize / psbt.tx.vsize)
-				alert(feeRate)
+				console.log(feeRate)
 				
 				formData = new FormData(document.getElementById('send-form'));
 				formData.append("estimate_fee", true);
 				formData.append("action", "createpsbt");
-				formData.append("fee_rate", feeRate.toFixed(8));
+				console.log(formData);
+				formData.set("fee_rate", feeRate.toFixed(8));
+				console.log(formData);
 
 				response = await fetch(
 					'/wallets/{{ wallet.alias }}/send/new',
@@ -421,13 +423,13 @@
 				);
 				psbt = await response.json();
 				console.log(psbt);
-				alert('psbt');
 				let feeOptionManual = document.getElementById('fee_option_manual')
 				if (!feeOptionManual.checked) {
 					feeOptionManual.checked = true;
 					showFeeOption(feeOptionManual);
 					document.getElementById('fee_rate').value = manualFee;
 				}
+				fees = psbt.fee * 1e8;
 
 				document.getElementById('calculated_tx_fee').innerText = `: ${fees} sats`;
 				return fees;

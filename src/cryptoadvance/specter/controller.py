@@ -1040,11 +1040,12 @@ def wallet_sendnew(wallet_alias):
                 fee_rate = float(request.form.get('fee_rate_dynamic'))
             else:
                 if request.form.get('fee_rate'):
-                    fee_rate = float(request.form['fee_rate'])
+                    fee_rate = round(float(request.form['fee_rate']), 8)
                     print('fee_rate')
                     print(fee_rate)
 
             try:
+                print(addresses, amounts, subtract, fee_rate, fee_unit, selected_coins)
                 psbt = wallet.createpsbt(addresses, amounts, subtract=subtract, fee_rate=fee_rate, fee_unit=fee_unit, selected_coins=selected_coins, readonly='estimate_fee' in request.form)
                 if psbt is None:
                     err = "Probably you don't have enough funds, or something else..."
@@ -1055,6 +1056,7 @@ def wallet_sendnew(wallet_alias):
                             if addresses[0] in v["scriptPubKey"]["addresses"]:
                                 amounts[0] = v["value"]
             except Exception as e:
+                print(e)
                 err = e
             if err is None:
                 if 'estimate_fee' in request.form:
