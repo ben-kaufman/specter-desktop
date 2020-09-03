@@ -1040,7 +1040,9 @@ def wallet_sendnew(wallet_alias):
                 fee_rate = float(request.form.get('fee_rate_dynamic'))
             else:
                 if request.form.get('fee_rate'):
-                    fee_rate = float(request.form.get('fee_rate'))
+                    fee_rate = float(request.form['fee_rate'])
+                    print('fee_rate')
+                    print(fee_rate)
 
             try:
                 psbt = wallet.createpsbt(addresses, amounts, subtract=subtract, fee_rate=fee_rate, fee_unit=fee_unit, selected_coins=selected_coins, readonly='estimate_fee' in request.form)

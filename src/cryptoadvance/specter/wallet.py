@@ -663,10 +663,10 @@ class Wallet():
 
         self.setlabel(self.change_address, "Change #{}".format(self.change_index))
 
-        # if fee_rate > 0.0 and fee_unit == "SAT_B":
+        if fee_rate > 0.0 and fee_unit == "SAT_B":
             # bitcoin core needs us to convert sat/B to BTC/kB
-        options["feeRate"] = 0.0001 #(fee_rate * 1000) / 10 ** 8
-        print(options["feeRate"])
+            options["feeRate"] = (fee_rate * 1000) / 10 ** 8
+            print(options["feeRate"])
 
         # don't reuse change addresses - use getrawchangeaddress instead
         r = self.cli.walletcreatefundedpsbt(
@@ -778,3 +778,21 @@ class Wallet():
             psbt["raw"] = raw["hex"]
         self.save_pending_psbt(psbt)
         return psbt
+
+    @property
+    def weight_per_input(self):
+        if self.is_multisig:
+            input_size = 0
+            for i in range(0, len(self.keys)):
+                input_size += 34
+            for i in range(0, self.sigs_required):
+                input_size += 75
+
+            if not self.recv_descriptor.startswith('wsh'):
+                input_size += 136
+            return input_size
+        else:
+            if self.recv_descriptor.startswith('wpkh'):
+                return 109
+            else:
+                return 197
