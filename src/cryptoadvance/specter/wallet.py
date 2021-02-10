@@ -1185,7 +1185,7 @@ class Wallet:
         )
         psbt["tx_full_size"] = tx_full_size
 
-        psbt["base64"] = b64psbt
+        psbt["base64"] = self.fill_psbt(b64psbt, non_witness=True, xpubs=True)
         psbt["amount"] = amounts
         psbt["address"] = addresses
         psbt["time"] = time.time()
