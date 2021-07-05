@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-05 12:41-0500\n"
+"POT-Creation-Date: 2021-07-05 13:26-0500\n"
 "PO-Revision-Date: 2021-07-01 10:51+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: sv\n"
@@ -2497,7 +2497,6 @@ msgid "Loading wallet..."
 msgstr "Laddar plånbok..."
 
 #: src/cryptoadvance/specter/templates/node/internal_node_logs.jinja:6
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:10
 #: src/cryptoadvance/specter/templates/wallet/components/wallet_menu.jinja:15
 msgid "Settings"
 msgstr "Inställningar"
@@ -2858,91 +2857,6 @@ msgstr "Specter-Desktop validerar <a href=\"https://github.com/bitcoin/bips/blob
 msgid "However, a compromised full node could return a fake block that was never mined into Bitcoin's blockchain! If you find the displayed block hash in other locations (other nodes, block explorers, etc) <strong>and you trust specter-desktop isn't lying to you</strong>, then you can be sure this transaction exists in their blockchain as well."
 msgstr "Dock kan en kompromissad nod återge fejkade block som aldrig brutits till Bitcoins blockkedja! Om du kan hitta det visade blocket på ett annat ställe (en annan nod, en blockkedjeutforskare, et.c.) <strong>och du litar på att specter-dekstop inte ljuger för dig</strong>, så kan du vara säker på att transaktionen finns på deras blockkedja också."
 
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:14
-msgid "Hardware Devices Bridge"
-msgstr "Hårdvaruenhetsbrygga"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:15
-msgid "Allows Specter to communicate with your hardware devices over USB."
-msgstr "Tillåt Specter att kommunicera med din hårdvarunyckel via USB."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:20
-msgid "Local USB connection"
-msgstr "Lokal USB-koppling"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:22
-msgid "Select this if Specter is installed on this computer"
-msgstr "Välj denna om Specter är installerat på den här datorn"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:28
-msgid "Remote Specter USB connection"
-msgstr "USB-koppling på annan dator"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:30
-msgid "Select this if Specter is installed on a different machine"
-msgstr "Välj denna om Specter är installerad på en annan dator"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:38
-msgid "Select this if you would like to configure manually (experts only)"
-msgstr "Välj denna om du vill manuellt konfigurera (enbart experter)"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:75
-msgid "Before changing these settings"
-msgstr "Innan du ändrar de här inställningarna"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:77
-msgid "If you haven’t done so already, head to “Preferences” on your desktop app (found on the top navigation). Select the option to connect remotely."
-msgstr "Om du inte redan gjort det, gå till \"Inställningar\" på din desktopapp (du hittar detta i navigationsraden längst upp). Välj att ansluta till annan dator."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:83
-msgid "Save Changes"
-msgstr "Spara ändringar"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:86
-msgid "You might also need to allow Specter to communicate with the device bridge."
-msgstr "Du behöver eventuellt tillåta Specter att kommunicera med enhetsbryggan."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:88
-msgid "Access the device bridge settings."
-msgstr "Gå till inställningar för enhetsbryggan."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Add the domain"
-msgstr "Lägg till domän"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Copied Specter URL"
-msgstr "Kopiera Specter URL"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "copy"
-msgstr "kopiera"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "to the whitelist there."
-msgstr "till dess vitlista."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Save the changes and close the window."
-msgstr "Spara ändringar och stäng fönstret."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
-msgstr "Koppla in din hårdvarunyckel till datorn och testa om Specter upptäcker den"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
-msgid "Test connection"
-msgstr "Testa uppkoppling"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:98
-msgid "Device detected successfully! USB connections configured correctly!"
-msgstr "Enhet hittades! USB-kopplingen fungerar!"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:100
-msgid "Failed to detect devices"
-msgstr "Misslyckades att hitta enheter"
-
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:29
 msgid "Tor configurations"
 msgstr "Torinställningar"
@@ -3006,6 +2920,10 @@ msgstr "Starta om Specter för att ändringar i kontrollport ska användas."
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:78
 msgid "Set to custom port here, if kept empty the default (9051 and 9151) is used"
 msgstr "Ange egen port här, om det lämnas tomt används standard (9051 och 9151)"
+
+#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
+msgid "Test connection"
+msgstr "Testa uppkoppling"
 
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:83
 msgid "Additional Options"
@@ -4229,4 +4147,64 @@ msgstr "Göm nyckeldetaljer"
 
 #~ msgid "<p><br>Configure Bitcoin Core is running with wallets disabled.<br><br>Please make sure disablewallet is off (set disablewallet=0 in your bitcoin.conf), then restart Bitcoin Core and try again.<br>See <a href=\"https://github.com/cryptoadvance/specter-desktop/blob/34ca139694ecafb2e7c2bd5ad5c4ac74c6d11501/docs/faq.md#im-not-sure-i-want-the-bitcoin-core-wallet-functionality-to-be-used-is-that-mandatory-if-so-is-it-considered-secure\" target=\"_blank\" style=\"color: white;\">here</a> for more information.</p>"
 #~ msgstr "<p><br>Bitcoin Core är inställt med plånböcker avstängda.<br><br>Vänligen se till att disablewallet är av (set disablewallet=0 i din bitcoin.conf), starta sedan om Bitcoin Core och försök igen.<br>Se <a href=\"https://github.com/cryptoadvance/specter-desktop/blob/34ca139694ecafb2e7c2bd5ad5c4ac74c6d11501/docs/faq.md#im-not-sure-i-want-the-bitcoin-core-wallet-functionality-to-be-used-is-that-mandatory-if-so-is-it-considered-secure\" target=\"_blank\" style=\"color: white;\">här</a> för mer information.</p>"
+
+#~ msgid "Hardware Devices Bridge"
+#~ msgstr "Hårdvaruenhetsbrygga"
+
+#~ msgid "Allows Specter to communicate with your hardware devices over USB."
+#~ msgstr "Tillåt Specter att kommunicera med din hårdvarunyckel via USB."
+
+#~ msgid "Local USB connection"
+#~ msgstr "Lokal USB-koppling"
+
+#~ msgid "Select this if Specter is installed on this computer"
+#~ msgstr "Välj denna om Specter är installerat på den här datorn"
+
+#~ msgid "Remote Specter USB connection"
+#~ msgstr "USB-koppling på annan dator"
+
+#~ msgid "Select this if Specter is installed on a different machine"
+#~ msgstr "Välj denna om Specter är installerad på en annan dator"
+
+#~ msgid "Select this if you would like to configure manually (experts only)"
+#~ msgstr "Välj denna om du vill manuellt konfigurera (enbart experter)"
+
+#~ msgid "Before changing these settings"
+#~ msgstr "Innan du ändrar de här inställningarna"
+
+#~ msgid "If you haven’t done so already, head to \"Preferences\" on your desktop app (found on the top navigation). Select the option to connect remotely."
+#~ msgstr "Om du inte redan gjort det, gå till \"Inställningar\" på din desktopapp (du hittar detta i navigationsraden längst upp). Välj att ansluta till annan dator."
+
+#~ msgid "Save Changes"
+#~ msgstr "Spara ändringar"
+
+#~ msgid "You might also need to allow Specter to communicate with the device bridge."
+#~ msgstr "Du behöver eventuellt tillåta Specter att kommunicera med enhetsbryggan."
+
+#~ msgid "Access the device bridge settings."
+#~ msgstr "Gå till inställningar för enhetsbryggan."
+
+#~ msgid "Add the domain"
+#~ msgstr "Lägg till domän"
+
+#~ msgid "Copied Specter URL"
+#~ msgstr "Kopiera Specter URL"
+
+#~ msgid "copy"
+#~ msgstr "kopiera"
+
+#~ msgid "to the whitelist there."
+#~ msgstr "till dess vitlista."
+
+#~ msgid "Save the changes and close the window."
+#~ msgstr "Spara ändringar och stäng fönstret."
+
+#~ msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
+#~ msgstr "Koppla in din hårdvarunyckel till datorn och testa om Specter upptäcker den"
+
+#~ msgid "Device detected successfully! USB connections configured correctly!"
+#~ msgstr "Enhet hittades! USB-kopplingen fungerar!"
+
+#~ msgid "Failed to detect devices"
+#~ msgstr "Misslyckades att hitta enheter"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-05 12:41-0500\n"
+"POT-Creation-Date: 2021-07-05 13:26-0500\n"
 "PO-Revision-Date: 2021-07-01 00:17-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ta\n"
@@ -2480,7 +2480,6 @@ msgid "Loading wallet..."
 msgstr ""
 
 #: src/cryptoadvance/specter/templates/node/internal_node_logs.jinja:6
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:10
 #: src/cryptoadvance/specter/templates/wallet/components/wallet_menu.jinja:15
 msgid "Settings"
 msgstr ""
@@ -2839,91 +2838,6 @@ msgstr ""
 msgid "However, a compromised full node could return a fake block that was never mined into Bitcoin's blockchain! If you find the displayed block hash in other locations (other nodes, block explorers, etc) <strong>and you trust specter-desktop isn't lying to you</strong>, then you can be sure this transaction exists in their blockchain as well."
 msgstr ""
 
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:14
-msgid "Hardware Devices Bridge"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:15
-msgid "Allows Specter to communicate with your hardware devices over USB."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:20
-msgid "Local USB connection"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:22
-msgid "Select this if Specter is installed on this computer"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:28
-msgid "Remote Specter USB connection"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:30
-msgid "Select this if Specter is installed on a different machine"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:38
-msgid "Select this if you would like to configure manually (experts only)"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:75
-msgid "Before changing these settings"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:77
-msgid "If you haven’t done so already, head to “Preferences” on your desktop app (found on the top navigation). Select the option to connect remotely."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:83
-msgid "Save Changes"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:86
-msgid "You might also need to allow Specter to communicate with the device bridge."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:88
-msgid "Access the device bridge settings."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Add the domain"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Copied Specter URL"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "copy"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "to the whitelist there."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Save the changes and close the window."
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
-msgid "Test connection"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:98
-msgid "Device detected successfully! USB connections configured correctly!"
-msgstr ""
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:100
-msgid "Failed to detect devices"
-msgstr ""
-
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:29
 msgid "Tor configurations"
 msgstr ""
@@ -2986,6 +2900,10 @@ msgstr ""
 
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:78
 msgid "Set to custom port here, if kept empty the default (9051 and 9151) is used"
+msgstr ""
+
+#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
+msgid "Test connection"
 msgstr ""
 
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:83
@@ -4209,5 +4127,65 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "<p><br>Configure Bitcoin Core is running with wallets disabled.<br><br>Please make sure disablewallet is off (set disablewallet=0 in your bitcoin.conf), then restart Bitcoin Core and try again.<br>See <a href=\"https://github.com/cryptoadvance/specter-desktop/blob/34ca139694ecafb2e7c2bd5ad5c4ac74c6d11501/docs/faq.md#im-not-sure-i-want-the-bitcoin-core-wallet-functionality-to-be-used-is-that-mandatory-if-so-is-it-considered-secure\" target=\"_blank\" style=\"color: white;\">here</a> for more information.</p>"
+#~ msgstr ""
+
+#~ msgid "Hardware Devices Bridge"
+#~ msgstr ""
+
+#~ msgid "Allows Specter to communicate with your hardware devices over USB."
+#~ msgstr ""
+
+#~ msgid "Local USB connection"
+#~ msgstr ""
+
+#~ msgid "Select this if Specter is installed on this computer"
+#~ msgstr ""
+
+#~ msgid "Remote Specter USB connection"
+#~ msgstr ""
+
+#~ msgid "Select this if Specter is installed on a different machine"
+#~ msgstr ""
+
+#~ msgid "Select this if you would like to configure manually (experts only)"
+#~ msgstr ""
+
+#~ msgid "Before changing these settings"
+#~ msgstr ""
+
+#~ msgid "If you haven’t done so already, head to \"Preferences\" on your desktop app (found on the top navigation). Select the option to connect remotely."
+#~ msgstr ""
+
+#~ msgid "Save Changes"
+#~ msgstr ""
+
+#~ msgid "You might also need to allow Specter to communicate with the device bridge."
+#~ msgstr ""
+
+#~ msgid "Access the device bridge settings."
+#~ msgstr ""
+
+#~ msgid "Add the domain"
+#~ msgstr ""
+
+#~ msgid "Copied Specter URL"
+#~ msgstr ""
+
+#~ msgid "copy"
+#~ msgstr ""
+
+#~ msgid "to the whitelist there."
+#~ msgstr ""
+
+#~ msgid "Save the changes and close the window."
+#~ msgstr ""
+
+#~ msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
+#~ msgstr ""
+
+#~ msgid "Device detected successfully! USB connections configured correctly!"
+#~ msgstr ""
+
+#~ msgid "Failed to detect devices"
 #~ msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-05 12:41-0500\n"
+"POT-Creation-Date: 2021-07-05 13:26-0500\n"
 "PO-Revision-Date: 2021-07-04 15:41+0200\n"
 "Last-Translator: Sergei Tikhomirov <sergey.s.tikhomirov@gmail.com>\n"
 "Language: ru\n"
@@ -2495,7 +2495,6 @@ msgid "Loading wallet..."
 msgstr "Загрузка кошелька..."
 
 #: src/cryptoadvance/specter/templates/node/internal_node_logs.jinja:6
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:10
 #: src/cryptoadvance/specter/templates/wallet/components/wallet_menu.jinja:15
 msgid "Settings"
 msgstr "Настройки"
@@ -2856,91 +2855,6 @@ msgstr "Specter Desktop проверяет доказательства Мерк
 msgid "However, a compromised full node could return a fake block that was never mined into Bitcoin's blockchain! If you find the displayed block hash in other locations (other nodes, block explorers, etc) <strong>and you trust specter-desktop isn't lying to you</strong>, then you can be sure this transaction exists in their blockchain as well."
 msgstr "Впрочем, скомпрометированный полный узел может возвращать поддельный блок, который не был включен в блокчейн биткоина! Если вы видите показанный хэш блока в других источниках (других полных узлах, эксплорерах блоков) <strong>и вы верите, что Specter Desktop вам не врет</strong>, тогда вы можете быть уверены, что эта транзакция также включена в их версию блокчейна."
 
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:14
-msgid "Hardware Devices Bridge"
-msgstr "Мост к аппаратным устройствам"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:15
-msgid "Allows Specter to communicate with your hardware devices over USB."
-msgstr "Позволяет Specter общаться с вашими аппаратными устройствами по USB."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:20
-msgid "Local USB connection"
-msgstr "Локальное USB-соединение"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:22
-msgid "Select this if Specter is installed on this computer"
-msgstr "Выберите, если Specter установлен на этом компьютере"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:28
-msgid "Remote Specter USB connection"
-msgstr "USB-соединение к Specter на удаленном компьютере"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:30
-msgid "Select this if Specter is installed on a different machine"
-msgstr "Выберите, если Specter установлен на другом компьютере"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:38
-msgid "Select this if you would like to configure manually (experts only)"
-msgstr "Ручная настройка (только для опытных пользователей)"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:75
-msgid "Before changing these settings"
-msgstr "Прежде чем менять эти настройки"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:77
-msgid "If you haven’t done so already, head to “Preferences” on your desktop app (found on the top navigation). Select the option to connect remotely."
-msgstr "Если вы этого еще не сделали, откройте \"Настройки\" на десктоп-приложении (смотри верхнюю панель навигации). Выберите удаленное соединение."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:83
-msgid "Save Changes"
-msgstr "Сохранить изменения"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:86
-msgid "You might also need to allow Specter to communicate with the device bridge."
-msgstr "Возможно, вам потребуется разрешить Specter общаться с мостом к устройствам."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:88
-msgid "Access the device bridge settings."
-msgstr "Открыть настройки моста к устройствам."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Add the domain"
-msgstr "Добавить домен"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Copied Specter URL"
-msgstr "URL Specter скопирован"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "copy"
-msgstr "скопировать"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "to the whitelist there."
-msgstr "в белый список там."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:89
-msgid "Save the changes and close the window."
-msgstr "Сохранить изменения и закрыть окно."
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
-msgstr "Подключите аппаратный кошелек к компьютеру и проверьте, смог ли Specter к нему подключиться"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:90
-#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
-msgid "Test connection"
-msgstr "Проверка соединения"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:98
-msgid "Device detected successfully! USB connections configured correctly!"
-msgstr "Устройство успешно определено! USB-соединение настроено корректно!"
-
-#: src/cryptoadvance/specter/templates/settings/hwi_settings.jinja:100
-msgid "Failed to detect devices"
-msgstr "Не удалось определить устройства"
-
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:29
 msgid "Tor configurations"
 msgstr "Настройки Tor"
@@ -3005,6 +2919,10 @@ msgstr "Перезапустите Specter, чтобы изменение кон
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:78
 msgid "Set to custom port here, if kept empty the default (9051 and 9151) is used"
 msgstr "Настройка своего порта здесь, если пусто — используются значения по умолчанию (9051 и 9151)"
+
+#: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:80
+msgid "Test connection"
+msgstr "Проверка соединения"
 
 #: src/cryptoadvance/specter/templates/settings/tor_settings.jinja:83
 msgid "Additional Options"
@@ -4225,4 +4143,64 @@ msgstr "Скрыть детали ключей"
 
 #~ msgid "Node with this name already exits, please choose a different name."
 #~ msgstr "Уже есть узел с таким именем. Пожалуйста, выберите другое имя."
+
+#~ msgid "Hardware Devices Bridge"
+#~ msgstr "Мост к аппаратным устройствам"
+
+#~ msgid "Allows Specter to communicate with your hardware devices over USB."
+#~ msgstr "Позволяет Specter общаться с вашими аппаратными устройствами по USB."
+
+#~ msgid "Local USB connection"
+#~ msgstr "Локальное USB-соединение"
+
+#~ msgid "Select this if Specter is installed on this computer"
+#~ msgstr "Выберите, если Specter установлен на этом компьютере"
+
+#~ msgid "Remote Specter USB connection"
+#~ msgstr "USB-соединение к Specter на удаленном компьютере"
+
+#~ msgid "Select this if Specter is installed on a different machine"
+#~ msgstr "Выберите, если Specter установлен на другом компьютере"
+
+#~ msgid "Select this if you would like to configure manually (experts only)"
+#~ msgstr "Ручная настройка (только для опытных пользователей)"
+
+#~ msgid "Before changing these settings"
+#~ msgstr "Прежде чем менять эти настройки"
+
+#~ msgid "If you haven’t done so already, head to \"Preferences\" on your desktop app (found on the top navigation). Select the option to connect remotely."
+#~ msgstr "Если вы этого еще не сделали, откройте \"Настройки\" на десктоп-приложении (смотри верхнюю панель навигации). Выберите удаленное соединение."
+
+#~ msgid "Save Changes"
+#~ msgstr "Сохранить изменения"
+
+#~ msgid "You might also need to allow Specter to communicate with the device bridge."
+#~ msgstr "Возможно, вам потребуется разрешить Specter общаться с мостом к устройствам."
+
+#~ msgid "Access the device bridge settings."
+#~ msgstr "Открыть настройки моста к устройствам."
+
+#~ msgid "Add the domain"
+#~ msgstr "Добавить домен"
+
+#~ msgid "Copied Specter URL"
+#~ msgstr "URL Specter скопирован"
+
+#~ msgid "copy"
+#~ msgstr "скопировать"
+
+#~ msgid "to the whitelist there."
+#~ msgstr "в белый список там."
+
+#~ msgid "Save the changes and close the window."
+#~ msgstr "Сохранить изменения и закрыть окно."
+
+#~ msgid "Connect your hardware wallet to your computer and test if Specter manage to reach it"
+#~ msgstr "Подключите аппаратный кошелек к компьютеру и проверьте, смог ли Specter к нему подключиться"
+
+#~ msgid "Device detected successfully! USB connections configured correctly!"
+#~ msgstr "Устройство успешно определено! USB-соединение настроено корректно!"
+
+#~ msgid "Failed to detect devices"
+#~ msgstr "Не удалось определить устройства"
 
